@@ -1,0 +1,9 @@
+{"kind": "synthetic-hls", "rep": 1, "fragments": 1, "delayMs": 120, "milliseconds": 2911, "bytes": 81276, "sha256": "5c432d8b4a8260421efd937d551e08104f3ede5cc9769e65cf7b2c1d5676a350"}
+{"kind": "synthetic-hls", "rep": 1, "fragments": 2, "delayMs": 120, "milliseconds": 2540, "bytes": 81276, "sha256": "5c432d8b4a8260421efd937d551e08104f3ede5cc9769e65cf7b2c1d5676a350"}
+{"kind": "synthetic-hls", "rep": 1, "fragments": 4, "delayMs": 120, "milliseconds": 2381, "bytes": 81276, "sha256": "5c432d8b4a8260421efd937d551e08104f3ede5cc9769e65cf7b2c1d5676a350"}
+{"kind": "synthetic-hls", "rep": 2, "fragments": 1, "delayMs": 120, "milliseconds": 2883, "bytes": 81276, "sha256": "5c432d8b4a8260421efd937d551e08104f3ede5cc9769e65cf7b2c1d5676a350"}
+{"kind": "synthetic-hls", "rep": 2, "fragments": 2, "delayMs": 120, "milliseconds": 2525, "bytes": 81276, "sha256": "5c432d8b4a8260421efd937d551e08104f3ede5cc9769e65cf7b2c1d5676a350"}
+{"kind": "synthetic-hls", "rep": 2, "fragments": 4, "delayMs": 120, "milliseconds": 2443, "bytes": 81276, "sha256": "5c432d8b4a8260421efd937d551e08104f3ede5cc9769e65cf7b2c1d5676a350"}
+{"kind": "synthetic-hls", "rep": 3, "fragments": 1, "delayMs": 120, "milliseconds": 2853, "bytes": 81276, "sha256": "5c432d8b4a8260421efd937d551e08104f3ede5cc9769e65cf7b2c1d5676a350"}
+{"kind": "synthetic-hls", "rep": 3, "fragments": 2, "delayMs": 120, "milliseconds": 2537, "bytes": 81276, "sha256": "5c432d8b4a8260421efd937d551e08104f3ede5cc9769e65cf7b2c1d5676a350"}
+{"kind": "synthetic-hls", "rep": 3, "fragments": 4, "delayMs": 120, "milliseconds": 2425, "bytes": 81276, "sha256": "5c432d8b4a8260421efd937d551e08104f3ede5cc9769e65cf7b2c1d5676a350"}

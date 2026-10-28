@@ -1,0 +1,4 @@
+{
+  "*": ["bun run lint:prettier:fix", "bunx secretlint"],
+  "*.{js,jsx,ts,tsx}": "bun run lint:eslint:check-file"
+}

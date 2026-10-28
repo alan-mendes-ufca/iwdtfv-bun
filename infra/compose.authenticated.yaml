@@ -1,0 +1,18 @@
+# Private HTTPS via Tailscale Serve. No TCP port is published.
+services:
+  gateway:
+    ports: !override []
+    command:
+      [
+        sh,
+        -c,
+        "rm -f /run/iwdtfv-serve/http.sock && exec nginx -g 'daemon off;'",
+      ]
+    volumes:
+      - ./nginx.serve.conf:/etc/nginx/nginx.conf:ro
+      - ${SERVE_SOCKET_DIRECTORY:?Set the private gateway socket directory}:/run/iwdtfv-serve
+  app:
+    environment:
+      APP_AUTH_MODE: tailscale
+      APP_ALLOWED_USERS: ${APP_ALLOWED_USERS:?Set the exact allowed Tailscale login}
+      APP_ORIGIN: ${APP_ORIGIN:?Set the HTTPS Tailscale Serve origin}

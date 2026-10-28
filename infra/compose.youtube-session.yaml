@@ -1,0 +1,11 @@
+# Optional dedicated YouTube session; requires compose.authenticated.yaml.
+services:
+  app:
+    environment:
+      YTDLP_COOKIES_MODE: fallback
+      YTDLP_COOKIES_FILE: /run/secrets/youtube_cookies
+    secrets:
+      - youtube_cookies
+secrets:
+  youtube_cookies:
+    file: ${YOUTUBE_COOKIES_FILE:?Set a private 0600 dedicated YouTube cookie file}

@@ -1,0 +1,4 @@
+services:
+  gateway:
+    ports:
+      - "${TAILSCALE_ADDRESS:?Set TAILSCALE_ADDRESS}:${PORT:-8080}:8080"

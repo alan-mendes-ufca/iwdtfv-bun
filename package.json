@@ -1,0 +1,64 @@
+{
+  "name": "iwdtfv-bun",
+  "version": "1.0.0",
+  "description": "I want to download this fucking video: cole o link, escolha a qualidade e baixe.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --hot infra/server.ts",
+    "build": "bun build pages/index.html --outdir dist --minify",
+    "start": "NODE_ENV=production bun infra/server.ts",
+    "typecheck": "tsc --noEmit",
+    "lint:prettier:check": "prettier --check .",
+    "lint:prettier:fix": "prettier --write .",
+    "lint:eslint:check-dir": "eslint .",
+    "lint:eslint:check-file": "eslint",
+    "test": "YTDLP_BINARY=tests/fakes/yt-dlp.ts TEMP_DIR=/tmp/iwdtfv-test MIN_FREE_BYTES=1 MAX_FILESIZE_BYTES=100000000 RATE_LIMIT_INSPECT_PER_MINUTE=1000 RATE_LIMIT_DOWNLOAD_PER_MINUTE=1000 MAX_CONCURRENT_DOWNLOADS=4 concurrently --names server,test --hide server --kill-others --success command-test \"bun infra/server.ts\" \"bun test --max-concurrency=1 tests/unit tests/integration\"",
+    "test:watch": "bun test --watch --max-concurrency=1 tests/unit tests/integration",
+    "test:real": "TEST_REAL=1 TEMP_DIR=/tmp/iwdtfv-real concurrently --names server,test --hide server --kill-others --success command-test \"bun infra/server.ts\" \"bun test --max-concurrency=1 tests/_use-cases\"",
+    "prepare": "husky",
+    "commit": "cz",
+    "bench:matrix": "python3 scripts/performance/run-matrix.py"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "joi": "18.1.2",
+    "react": "19.2.5",
+    "react-dom": "19.2.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "20.5.2",
+    "@commitlint/config-conventional": "20.5.0",
+    "@eslint/js": "9.39.2",
+    "@secretlint/secretlint-rule-preset-recommend": "12.3.1",
+    "@types/async-retry": "1.4.9",
+    "@types/bun": "1.4.3",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "async-retry": "1.3.3",
+    "commitizen": "4.3.1",
+    "concurrently": "9.2.1",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "9.39.2",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-prettier": "5.5.5",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.5.0",
+    "husky": "9.1.7",
+    "lint-staged": "16.4.0",
+    "prettier": "3.6.2",
+    "secretlint": "12.3.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "bun": ">=1.4.0"
+  }
+}
